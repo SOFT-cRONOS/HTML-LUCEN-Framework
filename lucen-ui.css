@@ -1,0 +1,1237 @@
+:root {
+  /* Colores principales */
+  --lucen-primary: #0163bf;
+  --lucen-primary-light: #4b9eec;
+  --lucen-primary-dark: #03467a;
+  --lucen-success: #00cc6a;
+  --lucen-success-light: #ebfcf4;
+  --lucen-success-light-rgb: 235, 252, 244;
+  --lucen-danger: #e81123;
+  --lucen-danger-light: #fae5e7;
+  --lucen-danger-light-rgb: 250, 229, 231;
+  --lucen-warning: #ffb900;
+  --lucen-warning-light: #fff9e9;
+  --lucen-warning-light-rgb: 255, 249, 233;
+  --lucen-info: #b146c2;
+  --lucen-info-light: #e2f9fa;
+  --lucen-info-light-rgb: 226, 249, 250;
+  --lucen-primary-light-rgb: 75, 158, 236;
+  
+  /* Colores de texto */
+  --lucen-text-primary: #323130;
+  --lucen-text-secondary: #605e5c;
+  --lucen-text-tertiary: #a19f9d;
+  --lucen-text-white: #ffffff;
+  
+  /* Colores de fondo */
+  --lucen-background-primary: #ffffff;
+  --lucen-background-primary-rgb: 255,255,255;
+  --lucen-background-secondary: #f3f2f1;
+  --lucen-background-tertiary: #e6e6e6;
+  --lucen-background-quaternary: #e1e1e1;
+  --lucen-background-dark: #201f1e;
+  
+  /* Bordes */
+  --lucen-border-color: #e6e5e5;
+  --lucen-border-radius: 4px;
+  --lucen-border-radius-lg: 8px;
+  
+  /* Sombras */
+  --lucen-shadow-sm: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  --lucen-shadow-md: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  --lucen-shadow-lg: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+  
+  /* Transiciones */
+  --lucen-transition: all 0.2s ease;
+  
+  /* Espaciado */
+  --lucen-spacing-xs: 3px;
+  --lucen-spacing-sm: 6px;
+  --lucen-spacing-md: 11px;
+  --lucen-spacing-lg: 24px;
+  --lucen-spacing-xl: 32px;
+  --lucen-spacing-xxl: 52px;
+
+  --lucen-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --lucen-box-shadow-bg:  0 10px 50px rgba(0, 0, 0, 0.4) !important;
+  --lucen-box-shadow-md:  0 2px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* Estilos base */
+
+
+
+
+/* ==========================================================================
+   Tipografía
+   ========================================================================== */
+   .text-center {
+    text-align: center;
+    }
+    
+    .small {
+      font-size: 0.875em;
+    }
+    
+    .text-muted {
+      color: #6c757d;
+    }
+
+    
+/* ==========================================================================
+   Fin Tipografía
+   ========================================================================== */
+
+.acrylic {
+  backdrop-filter: blur(10px)!important;
+  -webkit-backdrop-filter: blur(10px)!important; /* Soporte para Safari */
+  background-color: rgba(var(--lucen-background-primary-rgb), 0.6)!important;
+}
+
+/* Utilidades */
+.lucen-bg-primary { background-color: var(--lucen-primary); }
+.lucen-bg-success { background-color: var(--lucen-success); }
+.lucen-bg-danger { background-color: var(--lucen-danger); }
+.lucen-bg-warning { background-color: var(--lucen-warning); }
+.lucen-bg-info { background-color: var(--lucen-info); }
+
+.lucen-text-primary { color: var(--lucen-text-primary); }
+.lucen-text-secondary { color: var(--lucen-text-secondary); }
+.lucen-text-white { color: var(--lucen-text-white); }
+.lucen-text-light {
+  color: var(--lucen-text-white)
+}
+
+.mt-3 { margin-top: var(--lucen-spacing-md); }
+
+/* Layout */
+.lucen-body {
+  font-family: 'Noto Sans', system-ui, sans-serif;
+  /* background-color: var(--lucen-background-secondary); */
+  color: var(--lucen-text-primary);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.lucen-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: var(--lucen-transition);
+}
+
+.full-display {
+  min-height: 100vh;
+}
+
+.lucen-main {
+  display: flex;
+  flex: 1;
+  padding: var(--lucen-spacing-lg);
+  /* margin-left: 250px; */
+  transition: var(--lucen-transition);
+}
+
+.st-app-main {
+  margin-left: 250px;
+  padding: 0 20px 0 35px;
+  transition: var(--lucen-transition);
+}
+
+.st-app-main section{
+  width: 100%;  
+}
+
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-sm {
+  width: 30%;
+}
+
+.col-md {
+  width: 50%;
+}
+
+.col-md-6 {
+  width: 60%;
+}
+
+.col-lg {
+  width: 100%;
+}
+
+.transparent {
+  background: trasnparent!important;
+  background-color: transparent!important;
+  box-shadow: none!important;
+  border: none!important;
+}
+
+.lucen-title {
+  color: var(--lucen-text-primary);
+  font-weight: 600;
+  margin-bottom: var(--lucen-spacing-sm);
+}
+
+.lucen-subtitle {
+  color: var(--lucen-text-secondary);
+  margin-bottom: var(--lucen-spacing-lg);
+}
+
+/* Text Post element */
+          /* Estilos para bloques de código */
+          .lucen-code-block {
+              position: relative;
+              font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+              color: #f8f8f2;
+              overflow-x: auto;
+              
+          }
+
+          .lucen-code-block .code {
+              margin: 0;
+              white-space: pre-wrap;
+              word-wrap: break-word;
+              background-color: var(--lucen-background-dark)!important;
+              border-radius: var(--lucen-border-radius-lg);
+              color: white;
+              font-weight: 700;
+          }
+
+          .lucen-code-block .copy-btn {
+              position: absolute;
+              top: var(--lucen-spacing-sm);
+              right: var(--lucen-spacing-sm);
+              background-color: rgba(255, 255, 255, 0.1);
+              border: none;
+              color: var(--lucen-text-white);
+              padding: var(--lucen-spacing-xs) var(--lucen-spacing-sm);
+              border-radius: var(--lucen-border-radius);
+              cursor: pointer;
+              font-size: 0.75rem;
+              transition: var(--lucen-transition);
+              display: flex;
+              align-items: center;
+              gap: var(--lucen-spacing-xs);
+          }
+
+          .hljs-fment, .hljs-quote {color: #969896}
+          .hljs-deletion, .hljs-name, .hljs-regexp, .hljs-selector-class, .hljs-selector-id, .hljs-tag, .hljs-template-variable, .hljs-variable {color: #a3336b}
+          .hljs-built_in, .hljs-link, .hljs-literal, .hljs-meta, .hljs-number, .hljs-params, .hljs-type {color: #e78c45}
+          .hljs-attribute {color: #e7c547}
+          .hljs-addition, .hljs-bullet, .hljs-string, .hljs-symbol {color: #b9ca4a}
+          .hljs-section, .hljs-title {color: #7aa6da}
+          .hljs-keyword, .hljs-selector-tag {color: #c397d8}
+          .hljs-tag .hljs-name {color: #ea5a51}
+          .hljs-tag .hljs-attr {color: #998ddb}
+
+
+
+
+
+/* Navbar */
+.lucen-navbar {
+  position: sticky;
+  top: 0;
+  width: 60%;
+  z-index: 999;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--lucen-background-primary);
+  border-bottom: 1px solid var(--lucen-border-color);
+  padding: 0 var(--lucen-spacing-md);
+  box-shadow: var(--lucen-shadow-md);
+  margin-left: calc(100vh - 250px);
+  margin-top: 1rem;
+}
+
+.lucen-navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.lucen-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--lucen-spacing-sm);
+}
+
+.lucen-navbar-brand {
+  display: flex;
+  align-items: center;
+  color: var(--lucen-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-right: var(--lucen-spacing-lg);
+}
+
+.lucen-navbar-brand i {
+  margin-right: var(--lucen-spacing-sm);
+  color: var(--lucen-primary);
+}
+
+.lucen-navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--lucen-background-secondary);
+  border-radius: var(--lucen-border-radius);
+  padding: 6px 12px;
+  color: var(--lucen-text-secondary);
+  width: 100%;
+  max-width: 400px;
+}
+
+.lucen-navbar-search i {
+  position: absolute;
+  left: var(--lucen-spacing-sm);
+  color: var(--lucen-text-tertiary);
+}
+
+.lucen-navbar-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--lucen-text-primary);
+  width: 100%;
+  }
+
+
+.lucen-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--lucen-spacing-sm);
+}
+
+/* Sidebar */
+    .lucen-sidebar {
+      width: 250px;
+      background-color: var(--lucen-background-secondary);
+      border-right: 1px solid var(--lucen-border-color);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 900;
+      transition: var(--lucen-transition);
+      overflow-y: auto;
+      box-shadow: var(--lucen-shadow-sm);
+    }
+
+    .lucen-sidebar-header {
+      padding: var(--lucen-spacing-md);
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      height: 45px;
+    }
+
+    .lucen-sidebar-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .lucen-sidebar-cat h4{
+      text-align: start;
+      margin-left: .5rem;
+      margin-bottom: 0;
+    }
+
+    .lucen-sidebar-cat .lucen-separator{
+      width: 80%;
+      height: 1px;
+      margin: 10px 10px 10px 10px;
+      background: var(--lucen-background-quaternary);
+    }
+
+    .lucen-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .lucen-nav-item {
+      margin: var(--lucen-spacing-xs) var(--lucen-spacing-md);
+    }
+
+
+    .lucen-nav-link {
+      display: flex;
+      align-items: center;
+      padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+      color: var(--lucen-text-primary);
+      text-decoration: none;
+      border-radius: var(--lucen-border-radius);
+      transition: var(--lucen-transition);
+    }
+
+    .lucen-nav-link i {
+      margin-right: var(--lucen-spacing-sm);
+      color: var(--lucen-text-secondary);
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .lucen-nav-link span {
+      flex: 1;
+    }
+
+    .lucen-nav-arrow {
+      margin-left: auto;
+      transition: var(--lucen-transition);
+    }
+
+    .lucen-nav-link[aria-expanded="true"] .lucen-nav-arrow {
+      transform: rotate(180deg);
+    }
+
+    .lucen-nav-link:hover {
+      background-color: var(--lucen-background-tertiary);
+    }
+
+    .lucen-nav-link.active {
+      background-color: var(--lucen-background-tertiary);
+      font-weight: 500;
+      border-left-color: var(--lucen-primary);
+      border-left-style: solid;
+    }
+
+    /* .lucen-nav-link.active i {
+      color: var(--lucen-primary);
+    } */
+
+    .lucen-nav-submenu {
+      height: 0;
+      overflow: hidden;
+      padding-left: calc(var(--lucen-spacing-md) + 20px);
+      margin: 0;
+      transition: height 243ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      list-style: none;
+    }
+
+    .lucen-nav-submenu .lucen-nav-link {
+      padding: var(--lucen-spacing-xs) var(--lucen-spacing-md);
+      font-size: 0.9rem;
+    }
+
+    .lucen-nav-arrow.rotate {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+
+    .lucen-nav-submenu.show {
+      padding-top: var(--lucen-spacing-xs);
+      padding-bottom: var(--lucen-spacing-xs);
+    }
+
+
+    .lucen-sidebar.collapsed {
+      width: 60px;
+    }
+
+    .sidebar-collapsed .st-app-main {
+      margin-left: 60px;
+    }
+
+    .lucen-sidebar.collapsed .lucen-nav-link span,
+    .lucen-sidebar.collapsed .lucen-sidebar-header h3,
+    .lucen-sidebar.collapsed h4 {
+      display: none;
+    }
+
+    .lucen-sidebar.collapsed .lucen-nav-link {
+      justify-content: center;
+    }
+
+    .lucen-sidebar.collapsed .lucen-nav-link i {
+      margin-right: 0;
+    }
+
+    .lucen-sidebar.collapsed .lucen-nav-submenu {
+      padding: 0;
+    }
+/* ==========================================================================
+   Componentes
+   ========================================================================== */
+/* botones, tarjetas, formularios, etc. */
+    
+    /* 
+    BOTONES
+     */
+          .lucen-btn {
+            gap: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+            background-color: transparent;
+            color: var(--lucen-text-primary);
+            border: none;
+            border-radius: var(--lucen-border-radius);
+            cursor: pointer;
+            transition: var(--lucen-transition);
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1;
+          }
+          .lucen-btn span {
+            font-size: 15px;
+          }
+          .lucen-btn:hover {
+            background-color: var(--lucen-background-tertiary);
+            color: var(--lucen-text-primary);
+            box-shadow: var(--lucen-box-shadow);
+          }
+
+          .lucen-btn:active {
+            background-color: var(--lucen-background-tertiary);
+            transform: translateY(1px);
+            box-shadow: var(--lucen-box-shadow);
+          }
+
+          /* Primario */
+          .lucen-btn-primary {
+            background-color: var(--lucen-primary);
+            color: var(--lucen-text-white);
+          }
+
+          .lucen-btn-primary:hover {
+            background-color: var(--lucen-primary-light);
+            color: var(--lucen-text-white);
+          }
+
+          /* Outline */
+          .lucen-btn-outline {
+            background-color: transparent;
+            color: var(--dark);
+            border: 1px solid var(--lucen-border-color);
+          }
+
+          .lucen-btn-outline:hover {
+            background-color: var(--lucen-border-color);
+          }
+
+          /* Success */
+          .lucen-btn-success {
+            background-color: var(--lucen-success);
+            color: var(--lucen-text-white);
+          }
+
+          .lucen-btn-success:hover, .lucen-btn-outline-success:hover {
+            background-color: var(--lucen-success-light);
+            color: var(--lucen-success);
+          }
+
+          .lucen-btn-outline-success {
+            background-color: var(--lucen-background-primary);
+            color: var(--lucen-success);
+            border: 1px solid var(--lucen-success);
+          }
+
+          /* Danger */
+          .lucen-btn-danger {
+            background-color: var(--lucen-danger);
+            color: var(--lucen-text-white);
+          }
+
+          .lucen-btn-danger:hover, .lucen-btn-outline-danger:hover {
+            background-color: var(--lucen-danger-light);
+            color: var(--lucen-danger);
+          }
+
+          .lucen-btn-outline-danger {
+            background-color: var(--lucen-background-primary);
+            color: var(--lucen-danger);
+            border: 1px solid var(--lucen-danger);
+          }
+
+          /* Warning */
+          .lucen-btn-warning {
+            background-color: var(--lucen-warning);
+            color: var(--lucen-text-white);
+          }
+
+          .lucen-btn-warning:hover, .lucen-btn-outline-warning:hover {
+            background-color: var(--lucen-warning-light);
+            color: var(--lucen-warning);
+          }
+
+          .lucen-btn-outline-warning {
+            background-color: var(--lucen-background-primary);
+            color: var(--lucen-warning);
+            border: 1px solid var(--lucen-warning);
+          }
+
+          /* Info */
+          .lucen-btn-info {
+            background-color: var(--lucen-info);
+            color: var(--lucen-text-white);
+          }
+
+          .lucen-btn-info:hover, .lucen-btn-outline-info:hover {
+            background-color: var(--lucen-info-light);
+            color: var(--lucen-info);
+          }
+
+          .lucen-btn-outline-info {
+            background-color: var(--lucen-background-primary);
+            color: var(--lucen-info);
+            border: 1px solid var(--lucen-info);
+          }
+
+          /* As icon */
+          .lucen-btn-icon {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            color: var(--lucen-text-secondary);
+          }
+
+          .lucen-btn-icon:hover {
+            background-color: var(--lucen-background-secondary);
+            color: var(--lucen-text-primary);
+          }
+
+          .lucen-btn-icon:active {
+            background-color: var(--lucen-background-tertiary);
+          }
+
+          /* Disabled syle */
+        .disabled {
+          cursor: not-allowed !important;
+          filter: contrast(0.6) !important;
+          background-color: var(--lucen-background-secondary);
+          color: var(--lucen-text-tertiary);
+        }
+        .disabled:hover {
+            color: var(--lucen-text-white);
+        }
+    /* 
+    BOTONES
+     */
+  
+    /* 
+    Tarjetas 
+    */
+        .lucen-card {
+          background-color: var(--lucen-background-primary);
+          border-radius: var(--lucen-border-radius-lg);
+          box-shadow: var(--lucen-shadow-sm);
+          transition: var(--lucen-transition);
+          overflow: hidden;
+        }
+
+        .lucen-card:hover {
+          box-shadow: var(--lucen-shadow-md);
+          transform: translateY(-2px);
+          }
+
+        .lucen-card-header {
+          padding: var(--lucen-spacing-md);
+          border-bottom: 1px solid var(--lucen-border-color);
+          font-weight: 600;
+          font-size: 1.1rem;
+          }
+          
+          .lucen-card-header-image {
+          padding: 0;
+          border-bottom: none;
+          }
+          
+          .lucen-card-header-image img {
+          width: 100%;
+          height: auto;
+          display: block;
+          }
+          
+          .lucen-card-body {
+          padding: var(--lucen-spacing-md);
+          }
+          
+          .lucen-card-footer {
+          padding: var(--lucen-spacing-md);
+          border-top: 1px solid var(--lucen-border-color);
+          background-color: var(--lucen-background-secondary);
+          }
+          
+          .lucen-card-primary .lucen-card-header {
+          background-color: var(--lucen-primary);
+          color: var(--lucen-text-white);
+          }
+    /* 
+    Fin Tarjetas 
+    */
+/* ==========================================================================
+   Fin Componentes
+   ========================================================================== */
+
+
+  
+  /* Formularios */
+  .lucen-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucen-spacing-md);
+  }
+  
+  .lucen-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucen-spacing-xs);
+  }
+  
+  .lucen-label {
+  font-weight: 500;
+  color: var(--lucen-text-primary);
+  font-size: 0.875rem;
+  }
+  
+  .lucen-input, .lucen-select, .lucen-textarea {
+  padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+  border: 1px solid var(--lucen-border-color);
+  border-radius: var(--lucen-border-radius);
+  background-color: var(--lucen-background-primary);
+  transition: var(--lucen-transition);
+  font-size: 0.875rem;
+  }
+  
+  .lucen-input:focus, .lucen-select:focus, .lucen-textarea:focus {
+  outline: none;
+  border-color: var(--lucen-primary);
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+  }
+  
+  .lucen-input.is-invalid, .lucen-select.is-invalid, .lucen-textarea.is-invalid {
+  border-color: var(--lucen-danger);
+  }
+  
+  .lucen-input.is-valid, .lucen-select.is-valid, .lucen-textarea.is-valid {
+  border-color: var(--lucen-success);
+  }
+  
+  .lucen-invalid-feedback {
+  color: var(--lucen-danger);
+  font-size: 0.75rem;
+  }
+  
+  .lucen-valid-feedback {
+  color: var(--lucen-success);
+  font-size: 0.75rem;
+  }
+  
+  .lucen-checkbox, .lucen-radio {
+  display: flex;
+  align-items: center;
+  gap: var(--lucen-spacing-sm);
+  cursor: pointer;
+  font-size: 0.875rem;
+  }
+  
+  .lucen-checkbox input, .lucen-radio input {
+  margin: 0;
+  }
+  
+  .lucen-switch {
+  display: flex;
+  align-items: center;
+  gap: var(--lucen-spacing-sm);
+  cursor: pointer;
+  }
+  
+  .lucen-switch input {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: var(--lucen-background-tertiary);
+  border-radius: 10px;
+  transition: var(--lucen-transition);
+  cursor: pointer;
+  }
+  
+  .lucen-switch input:checked {
+  background-color: var(--lucen-primary);
+  }
+  
+  .lucen-switch input::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--lucen-background-primary);
+  top: 2px;
+  left: 2px;
+  transition: var(--lucen-transition);
+  }
+  
+  .lucen-switch input:checked::before {
+  left: 22px;
+  }
+  
+
+  
+  /* Badges */
+  .lucen-badge {
+  display: inline-block;
+  padding: var(--lucen-spacing-xs) var(--lucen-spacing-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: var(--lucen-background-tertiary);
+  color: var(--lucen-text-primary);
+  }
+  
+  .lucen-badge-primary {
+  background-color: var(--lucen-primary);
+  color: var(--lucen-text-white);
+  }
+  
+  .lucen-badge-success {
+  background-color: var(--lucen-success);
+  color: var(--lucen-text-white);
+  }
+  
+  .lucen-badge-danger {
+  background-color: var(--lucen-danger);
+  color: var(--lucen-text-white);
+  }
+  
+  .lucen-badge-warning {
+  background-color: var(--lucen-warning);
+  color: var(--lucen-text-primary);
+  }
+  
+/* Modales y alertas */
+        /* Modales */
+        /* Contenedor principal del modal */
+        .lucen-modal {
+          position: fixed!important;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1051;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }  
+
+        /* Modal visible */
+        .lucen-modal.show {
+          opacity: 1!important;
+          visibility: visible!important;
+        }
+
+        
+        /* Diálogo del modal */
+        .lucen-modal-dialog {
+          background-color: var(--lucen-background-primary);
+          border-radius: var(--lucen-border-radius);
+          box-shadow: var(--lucen-shadow-lg);
+          width: 100%;
+          max-width: 500px;
+          max-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          transform: translateY(20px);
+          transition: transform 0.3s ease;
+        }
+
+        /* Diálogo del modal cuando está visible */
+        .lucen-modal.show .lucen-modal-dialog {
+          transform: translateY(0);
+        }
+
+        /* Tamaño pequeño para modales de confirmación */
+        .lucen-modal-sm {
+          max-width: 400px;
+        }
+
+        /* Tamaño grande para modales con más contenido */
+        .lucen-modal-lg {
+          max-width: 800px;
+        }
+
+
+        .lucen-modal-header {
+          padding: 20px 30px 0 30px;
+          flex-direction: column;  
+          padding: var(--lucen-spacing-lg);
+          border-bottom: 1px solid var(--lucen-border-color);
+          display: flex;
+          align-items: start;
+          text-align: start;
+          justify-content: space-between;
+      }
+
+      .lucen-modal-header h1 {
+          margin: 0;
+          background-color: transparent;
+          font-size: 1.5em;
+      }
+
+      .lucen-modal-message {
+          font-size: 1em;
+          line-break: auto;
+          max-height: 24vh;
+          overflow-y: auto;
+          padding-top:5px;
+          padding-bottom: 15px;
+      }
+
+      .lucen-modal-footer {
+          padding: var(--lucen-spacing-lg);
+          border-top: 1px solid var(--lucen-border-color);
+          display: flex;
+          justify-content: flex-end;
+          gap: var(--lucen-spacing-sm);
+          background-color: var(--lucen-background-secondary);
+      }
+ 
+      /* Responsive */
+      @media (max-width: 576px) {
+          .lucen-modal-dialog {
+              width: 95%;
+              margin: 0 auto;
+          }
+          
+          .lucen-modal-footer {
+              flex-direction: column;
+          }
+          
+          .lucen-modal-footer .lucen-btn {
+              width: 100%;
+          }
+      }
+
+        /* Alertas */
+      .lucen-alert {
+          display: flex;
+          align-items: flex-start;
+          gap: var(--lucen-spacing-sm);
+          padding: var(--lucen-spacing-md);
+          border-radius: var(--lucen-border-radius);
+          background-color: var(--lucen-background-secondary);
+          margin-bottom: var(--lucen-spacing-sm);
+          border: 1px solid var(--lucen-background-dark);
+      }
+
+      .lucen-alert i {
+          font-size: 1.1rem;
+      }
+
+      .lucen-alert-success {
+          background-color: var(--lucen-success-light);
+          color: var(--lucen-success);
+          border: 1px solid var(--lucen-success);
+      }
+
+      .lucen-alert-danger {
+          background-color: var(--lucen-danger-light);
+          color: var(--lucen-danger);
+          border: 1px solid var(--lucen-danger);
+      }
+
+      .lucen-alert-warning {
+          background-color: var(--lucen-warning-light);
+          color: var(--lucen-warning);
+          border: 1px solid var(--lucen-warning);
+      }
+
+      /* Toasts */
+      .lucen-toast {
+          position: fixed;
+          bottom: var(--lucen-spacing-lg);
+          right: var(--lucen-spacing-lg);
+          padding: var(--lucen-spacing-md);
+          background-color: rgba(var(--lucen-background-primary-rgb), 0.82);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+          border-radius: var(--lucen-border-radius);
+          box-shadow: var(--lucen-shadow-lg);
+          display: flex;
+          align-items: center;
+          gap: var(--lucen-spacing-sm);
+          z-index: 1200;
+          transform: translateY(20px);
+          opacity: 0;
+          transition: var(--lucen-transition);
+      }
+
+      .lucen-toast.show {
+          transform: translateY(0);
+          opacity: 1;
+          
+      }
+
+      .lucen-toast i {
+          font-size: 1.2rem;
+      }
+
+      .lucen-toast-success {
+          background-color: rgba(var(--lucen-success-light-rgb), 0.82);
+          color: var(--lucen-success);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+      }
+
+      .lucen-toast-error {
+          background-color: rgba(var(--lucen-danger-light-rgb), 0.82);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+          color: var(--lucen-danger);
+      }
+
+      /* Tooltips */
+      .lucen-tooltip {
+          position: absolute;
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px); /* Soporte para Safari */
+          background-color: rgba(0, 0, 0, 0.6);
+          color: white;
+          padding: 8px 12px;
+          border-radius: 4px;
+          font-size: 14px;
+          z-index: 1070;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+          pointer-events: none;
+          white-space: nowrap;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .lucen-tooltip.show {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .lucen-tooltip::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 5px solid transparent;
+      }
+
+      /* Posicionamiento para tooltip arriba */
+      [data-lucen-placement="top"] .lucen-tooltip::after {
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-top-color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* Posicionamiento para tooltip abajo */
+      [data-lucen-placement="bottom"] .lucen-tooltip::after {
+          top: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-bottom-color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* Posicionamiento para tooltip izquierda */
+      [data-lucen-placement="left"] .lucen-tooltip::after {
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-left-color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* Posicionamiento para tooltip derecha */
+      [data-lucen-placement="right"] .lucen-tooltip::after {
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-right-color: rgba(0, 0, 0, 0.9);
+      }
+
+
+
+/* Drops down */
+      .lucen-dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: 110%;
+        background: var(--lucen-background-primary);
+        box-shadow: var(--lucen-shadow-md);
+        border-radius: var(--lucen-border-radius);
+        display: none;
+        flex-direction: column;
+        min-width: 160px;
+        overflow: hidden;
+    }
+
+    .lucen-dropdown-menu a {
+        padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+        text-decoration: none;
+        color: var(--lucen-text-primary);
+        display: block;
+        }
+
+    .lucen-dropdown-menu a:hover {
+        background: var(--lucen-background-secondary);
+    }
+
+
+
+
+
+
+
+
+  
+  /* Tabs */
+  .lucen-tabs {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .lucen-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--lucen-border-color);
+  }
+  
+  .lucen-tabs-btn {
+  padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--lucen-text-secondary);
+  transition: var(--lucen-transition);
+  }
+  
+  .lucen-tabs-btn:hover {
+  color: var(--lucen-text-primary);
+  }
+  
+  .lucen-tabs-btn.active {
+  color: var(--lucen-primary);
+  border-bottom-color: var(--lucen-primary);
+  }
+  
+  .lucen-tabs-content {
+  padding: var(--lucen-spacing-md) 0;
+  }
+  
+  .lucen-tabs-pane {
+  display: none;
+  }
+  
+  .lucen-tabs-pane.active {
+  display: block;
+  }
+  
+  /* Tablas */
+  .lucen-table-responsive {
+  overflow-x: auto;
+  }
+  
+  .lucen-table {
+  width: 100%;
+  border-collapse: collapse;
+  }
+  
+  .lucen-table th, .lucen-table td {
+  padding: var(--lucen-spacing-sm) var(--lucen-spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--lucen-border-color);
+  }
+  
+  .lucen-table th {
+  font-weight: 600;
+  background-color: var(--lucen-background-secondary);
+  }
+  
+  .lucen-table tr:hover {
+  background-color: var(--lucen-background-secondary);
+  }
+  
+  .lucen-table-pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--lucen-spacing-xs);
+  }
+  
+  /* Barras de progreso */
+  .lucen-progress {
+  height: 4px;
+  background-color: var(--lucen-background-tertiary);
+  border-radius: 2px;
+  overflow: hidden;
+  }
+  
+  .lucen-progress-bar {
+  height: 100%;
+  background-color: var(--lucen-primary);
+  transition: width 0.3s ease;
+  position: relative;
+  }
+  
+  .lucen-progress-bar::after {
+  content: attr(data-progress);
+  position: absolute;
+  right: var(--lucen-spacing-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lucen-text-white);
+  font-size: 0.625rem;
+  }
+  
+
+  
+  /* Avatar */
+  .lucen-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--lucen-primary);
+  color: var(--lucen-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+  .lucen-sidebar {
+  transform: translateX(-100%);
+  }
+  .lucen-sidebar.show {
+    transform: translateX(0);
+  }
+
+  .lucen-main {
+      margin-left: 0;
+  }
+}
